@@ -44,7 +44,6 @@ export function Video(props: VideoProps) {
         }
     })
 
-    console.log(props.lessonSlug, data);
     
 
     if (!data) {
@@ -52,6 +51,9 @@ export function Video(props: VideoProps) {
             <div className="flex-1"> Carregando...</div>
         )
     }
+
+    console.log(props.lessonSlug, data.lesson.videoId);
+
     return(
         <div className="flex-1">
             <div className="bg-black flex justify-center">
